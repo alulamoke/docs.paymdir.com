@@ -21,8 +21,16 @@ export default async function Page(props: {
     <DocsPage
       toc={page.data.toc}
       full={page.data.full}
-      tableOfContent={{ style: 'clerk' }}
+      breadcrumb={{ includePage: true }}
+      tableOfContent={{
+        style: 'clerk',
+      }}
       lastUpdate="2024/11/17"
+      editOnGithub={{
+        owner: 'alulamoke',
+        path: 'alulamoke',
+        repo: 'alulamoke',
+      }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
