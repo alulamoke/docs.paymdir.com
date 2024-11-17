@@ -1,0 +1,113 @@
+---
+title: Quick Start
+description: Quick Start desc
+
+---
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+Welcome to the docs! You can start writing documents in `/content/docs`.
+
+## What is Next?
+
+<Cards>
+  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
+  <Card title="Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
+</Cards>
+
+
+## Card
+import { HomeIcon } from 'lucide-react';
+ 
+<Cards>
+  <Card icon={<HomeIcon />} href="/" title="Home">
+    Go back to home
+  </Card>
+</Cards>
+
+## Callout
+<Callout>Hello World</Callout>
+
+
+###### You can add a title to the codeblock.
+```ts title="My Title"
+console.log('Hello World');
+```
+
+## Highlight Lines
+```tsx
+<div>Hello World</div>  // [!code highlight]
+<div>Hello World</div>
+<div>Goodbye</div>
+<div>Hello World</div>
+```
+
+## Highlight Words
+```js
+// [!code word:config]
+const config = {
+  reactStrictMode: true,
+};
+```
+
+## Diffs
+```ts
+console.log('hewwo'); // [!code --]
+console.log('hello'); // [!code ++]
+```
+
+## As Tab
+<Tabs items={["Tab 1", "Tab 2"]}>
+ 
+```ts tab="Tab 1"
+console.log('A');
+```
+ 
+```ts tab="Tab 2"
+console.log('B');
+```
+ 
+</Tabs>
+
+## Package Install
+```package-install
+npm i next -D
+```
+
+## Files
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+ 
+<Files>
+  <Folder name="app" defaultOpen>
+    <File name="layout.tsx" />
+    <File name="page.tsx" />
+    <File name="global.css" />
+  </Folder>
+  <Folder name="components">
+    <File name="button.tsx" />
+    <File name="tabs.tsx" />
+    <File name="dialog.tsx" />
+  </Folder>
+  <File name="package.json" />
+</Files>
+
+## Steps
+import { Step, Steps } from 'fumadocs-ui/components/steps';
+ 
+<Steps>
+<Step>
+
+### Step 1
+
+</Step>
+ 
+<Step>
+
+### Step 2
+
+</Step>
+<Step>
+
+### Step 3
+
+</Step>
+</Steps>
