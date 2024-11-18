@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { ImageZoom, ImageZoomProps } from 'fumadocs-ui/components/image-zoom';
 import { getGithubLastEdit } from 'fumadocs-core/server';
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -72,6 +73,8 @@ export default async function Page(props: {
           components={{
             ...defaultMdxComponents,
             img: ImageZoomWrapper,
+            Tabs,
+            Tab,
           }}
         />
       </DocsBody>
