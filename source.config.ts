@@ -4,4 +4,7 @@ export const { docs, meta } = defineDocs({
   dir: 'content/docs',
 });
 
-export default defineConfig();
+export default defineConfig({
+  lastModifiedTime: 'git',
+  generateManifest: true,
+});

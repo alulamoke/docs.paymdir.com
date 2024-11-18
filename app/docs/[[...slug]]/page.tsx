@@ -7,6 +7,7 @@ import {
 } from 'fumadocs-ui/page';
 import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -21,21 +22,30 @@ export default async function Page(props: {
     <DocsPage
       toc={page.data.toc}
       full={page.data.full}
-      breadcrumb={{ includePage: true }}
+      breadcrumb={{ includePage: true, includeSeparator: true }}
       tableOfContent={{
         style: 'clerk',
       }}
-      lastUpdate="2024/11/17"
-      editOnGithub={{
-        owner: 'alulamoke',
-        path: 'alulamoke',
-        repo: 'alulamoke',
+      tableOfContentPopover={{
+        style: 'clerk',
       }}
+      editOnGithub={{
+        sha: 'main',
+        owner: 'alulamoke',
+        repo: 'docs.dinarpay.et',
+        path: `content/docs/${page.file.path}`,
+      }}
+      lastUpdate={new Date(page.data.lastModified!)}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
-        <MDX components={{ ...defaultMdxComponents }} />
+        <MDX
+          components={{
+            ...defaultMdxComponents,
+            img: (props) => <ImageZoom {...(props as any)} />,
+          }}
+        />
       </DocsBody>
     </DocsPage>
   );
