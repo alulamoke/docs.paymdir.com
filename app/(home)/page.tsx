@@ -7,8 +7,8 @@ export default function HomePage() {
         <h1 className="mb-4 text-5xl font-bold">DinarPay Developer Hub</h1>
         <p className="text-muted-foreground">
           Comprehensive API documentation, integration guides, and resources to
-          help you seamlessly connect to DinarPay's powerful payment system.
-          Build, test, and deploy with ease.
+          help you seamlessly connect to DinarPay&apos;s powerful payment
+          system. Build, test, and deploy with ease.
         </p>
         <Link href="/docs">
           <button
