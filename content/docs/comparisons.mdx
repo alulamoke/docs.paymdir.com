@@ -1,5 +1,96 @@
 ---
 title: Comparisons
-description: Comparisons desc
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio placeat quidem nemo velit eligendi reprehenderit tenetur. Repellat, quia tempora corrupti dolorem magnam laudantium voluptatem reprehenderit nesciunt nulla repudiandae exercitationem!
+icon: 'GitCompareArrows'
 ---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+import { HomeIcon } from 'lucide-react';
+
+## Cards
+
+<Cards>
+  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
+  <Card title="Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
+  <Card icon={<HomeIcon />} href="/" title="Home">
+    Go back to home
+  </Card>
+</Cards>
+
+## Callout
+
+<Callout title='New feature' type='info'>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum optio placeat quidem nemo velit eligendi 
+  reprehenderit tenetur. Repellat, quia tempora corrupti dolorem magnam laudantium voluptatem reprehenderit
+  nesciunt nulla repudiandae exercitationem!
+</Callout>
+
+
+###### You can add a title to the codeblock.
+
+```js title="My Title"
+console.log('Hello World');
+```
+
+## Highlight Lines
+
+```tsx 
+<div>Hello World</div>  // [!code highlight]
+<div>Hello World</div>
+<div>Goodbye</div>
+<div>Hello World</div>
+```
+
+## Highlight Words
+
+```js
+// [!code word:config]
+const config = {
+  reactStrictMode: true,
+};
+```
+
+## Diffs
+
+```ts
+console.log('hewwo'); // [!code --]
+console.log('hello'); // [!code ++]
+```
+
+## As Tab
+
+<Tabs items={["Tab 1", "Tab 2"]}>
+ 
+```ts tab="Tab 1"
+console.log('A');
+```
+ 
+```ts tab="Tab 2"
+console.log('B');
+```
+ 
+</Tabs>
+
+## Package Install
+
+```package-install
+npm i next -D
+```
+
+## Files
+
+<Files>
+  <Folder name="app" defaultOpen>
+    <File name="layout.tsx" />
+    <File name="page.tsx" />
+    <File name="global.css" />
+  </Folder>
+  <Folder name="components">
+    <File name="button.tsx" />
+    <File name="tabs.tsx" />
+    <File name="dialog.tsx" />
+  </Folder>
+  <File name="package.json" />
+</Files>
 
