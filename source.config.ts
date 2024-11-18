@@ -9,6 +9,15 @@ export default defineConfig({
   lastModifiedTime: 'git',
   generateManifest: true,
   mdxOptions: {
-    remarkPlugins: [remarkInstall],
+    remarkPlugins: [
+      [
+        remarkInstall,
+        {
+          persist: {
+            id: 'persisted-package-install',
+          },
+        },
+      ],
+    ],
   },
 });
