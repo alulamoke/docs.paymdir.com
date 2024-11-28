@@ -8,7 +8,6 @@ import {
 import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { ImageZoom, ImageZoomProps } from 'fumadocs-ui/components/image-zoom';
-import { getGithubLastEdit } from 'fumadocs-core/server';
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 
 export default async function Page(props: {
@@ -20,21 +19,13 @@ export default async function Page(props: {
 
   const MDX = page.data.body;
 
-  const time = await getGithubLastEdit({
-    sha: 'main',
-    owner: 'alulamoke',
-    repo: 'docs.dinarpay.et',
-    path: `content/docs/${page.file.path}`,
-  });
-
   const ImageZoomWrapper = (
     props: React.ImgHTMLAttributes<HTMLImageElement>
   ) => {
     const { src, alt, ...rest } = props;
 
     if (!src || !alt) {
-      console.warn("ImageZoom requires 'src' and 'alt' to be defined.");
-      return <img {...props} />;
+      return;
     }
 
     return (
@@ -63,8 +54,7 @@ export default async function Page(props: {
         repo: 'docs.dinarpay.et',
         path: `content/docs/${page.file.path}`,
       }}
-      lastUpdate={new Date(time!)}
-      // lastUpdate={new Date(page.data.lastModified!)}
+      lastUpdate={new Date(page.data.lastModified!)}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
