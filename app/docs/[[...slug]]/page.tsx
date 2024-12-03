@@ -51,7 +51,7 @@ export default async function Page(props: {
       editOnGithub={{
         sha: 'main',
         owner: 'alulamoke',
-        repo: 'docs.dinarpay.et',
+        repo: 'docs.PayMdir.et',
         path: `content/docs/${page.file.path}`,
       }}
       // lastUpdate={new Date(page.data.lastModified!)}

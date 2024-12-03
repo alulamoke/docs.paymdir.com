@@ -19,14 +19,14 @@ export const baseOptions: BaseLayoutProps = {
           height={24}
           className="rounded-full object-cover size-6"
         />
-        <p className="font-semibold">DinarPay</p>
+        <p className="font-semibold">PayMdir</p>
       </div>
     ),
   },
   links: [
     {
       text: 'Docs',
-      url: '/docs',
+      url: '/docs/core',
       active: 'nested-url',
     },
     {

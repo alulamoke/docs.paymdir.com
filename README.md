@@ -1,4 +1,4 @@
-# docs.dinarpay.et
+# docs.PayMdir.et
 
 Run development server:
 

@@ -1,0 +1,7 @@
+{
+    "root": true,
+    "title": "PayMdir Docs",
+    "description": "PayMdir Docs desc",
+    "icon": "Building2",
+    "pages": ["---Guide---", "index", "comparisons", "---Setup---", "integrations", "transfer", "transaction", "testing"]
+}
