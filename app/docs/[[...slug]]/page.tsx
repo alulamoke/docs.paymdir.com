@@ -1,4 +1,4 @@
-import { source } from '@/lib/source';
+import { openapi, source } from '@/lib/source';
 import {
   DocsPage,
   DocsBody,
@@ -54,7 +54,7 @@ export default async function Page(props: {
         repo: 'docs.dinarpay.et',
         path: `content/docs/${page.file.path}`,
       }}
-      lastUpdate={new Date(page.data.lastModified!)}
+      // lastUpdate={new Date(page.data.lastModified!)}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
@@ -62,6 +62,7 @@ export default async function Page(props: {
         <MDX
           components={{
             ...defaultMdxComponents,
+            APIPage: openapi.APIPage,
             img: ImageZoomWrapper,
             Tabs,
             Tab,
