@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function HomePage() {
   return (
     <main className="flex flex-col gap-8 h-full">
-      <section className="flex items-center text-center flex-1 flex-col justify-center max-w-screen-md gap-4 mx-auto">
+      <section className="flex items-center text-center flex-1 flex-col justify-center max-w-screen-md gap-4 px-4 mx-auto">
         <h1 className="mb-4 text-5xl font-bold">PayMdir Developer Hub</h1>
         <p className="text-muted-foreground">
           Comprehensive API documentation, integration guides, and resources to
