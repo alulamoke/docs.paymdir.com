@@ -87,7 +87,7 @@ export async function generateMetadata(props: {
   return createMetadata(
     metadataImage.withImage(page.slugs, {
       title: page.data.title,
-      description: page.data.description ?? 'PayMdir Desc',
+      description: page.data.description,
       openGraph: {
         url: `/docs/${page.slugs.join('/')}`,
       },

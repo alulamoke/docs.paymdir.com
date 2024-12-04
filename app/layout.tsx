@@ -11,7 +11,8 @@ export const metadata = createMetadata({
     template: 'PayMdir | %s',
     default: 'PayMdir',
   },
-  description: 'PayMdir Desc',
+  description:
+    "Comprehensive API documentation, integration guides, and resources to help you seamlessly connect to PayMdir's powerful payment system. Build, test, and deploy with ease.",
   metadataBase: baseUrl,
 });
 
