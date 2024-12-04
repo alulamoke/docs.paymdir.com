@@ -1,14 +1,14 @@
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import type { ReactNode } from 'react';
+import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { Slot } from '@radix-ui/react-slot';
 import { baseOptions } from '@/app/layout.config';
 import { source } from '@/lib/source';
-import { Slot } from '@radix-ui/react-slot';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <DocsLayout
-      tree={source.pageTree}
       {...baseOptions}
+      tree={source.pageTree}
       sidebar={{
         tabs: {
           transform(option, node) {
