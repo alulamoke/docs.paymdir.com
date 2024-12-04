@@ -1,14 +1,15 @@
-import { openapi, source } from '@/lib/source';
+import { notFound } from 'next/navigation';
 import {
   DocsPage,
   DocsBody,
   DocsDescription,
   DocsTitle,
 } from 'fumadocs-ui/page';
-import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { ImageZoom, ImageZoomProps } from 'fumadocs-ui/components/image-zoom';
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { openapi, source } from '@/lib/source';
+import { createMetadata, metadataImage } from '@/lib/metadata';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -54,7 +55,6 @@ export default async function Page(props: {
         repo: 'docs.PayMdir.et',
         path: `content/docs/${page.file.path}`,
       }}
-      // lastUpdate={new Date(page.data.lastModified!)}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
@@ -84,8 +84,13 @@ export async function generateMetadata(props: {
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
-  return {
-    title: page.data.title,
-    description: page.data.description,
-  };
+  return createMetadata(
+    metadataImage.withImage(page.slugs, {
+      title: page.data.title,
+      description: page.data.description ?? 'PayMdir Desc',
+      openGraph: {
+        url: `/docs/${page.slugs.join('/')}`,
+      },
+    })
+  );
 }
