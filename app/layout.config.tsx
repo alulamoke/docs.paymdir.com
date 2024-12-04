@@ -14,7 +14,7 @@ export const baseOptions: BaseLayoutProps = {
       <div className="flex items-center gap-2 h-16 md:h-auto">
         <Image
           alt="Logo"
-          src="/logo.jpg"
+          src="/logo.png"
           width={24}
           height={24}
           className="rounded-full object-cover size-6"
@@ -22,6 +22,7 @@ export const baseOptions: BaseLayoutProps = {
         <p className="font-semibold">PayMdir</p>
       </div>
     ),
+    transparentMode: 'top',
   },
   links: [
     {
