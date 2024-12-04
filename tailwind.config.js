@@ -8,11 +8,10 @@ export default {
     './content/**/*.{md,mdx}',
     './mdx-components.{ts,tsx}',
     './node_modules/fumadocs-ui/dist/**/*.js',
-        "./node_modules/fumadocs-openapi/dist/**/*.js"
-    ],
+    './node_modules/fumadocs-openapi/dist/**/*.js',
+  ],
   presets: [
     createPreset({
-      preset: 'ocean',
       addGlobalColors: true,
     }),
   ],
