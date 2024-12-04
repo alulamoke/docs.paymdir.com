@@ -30,6 +30,6 @@ export function createMetadata(override: Metadata): Metadata {
 }
 
 export const baseUrl =
-  process.env.NODE_ENV === 'development' || !process.env.FRONTEND_URL
+  process.env.NODE_ENV === 'development'
     ? new URL('http://localhost:3000')
-    : new URL(`${process.env.FRONTEND_URL}`);
+    : new URL('https://paymdir.netlify.app');
