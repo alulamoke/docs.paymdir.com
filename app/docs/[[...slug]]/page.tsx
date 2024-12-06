@@ -9,7 +9,7 @@ import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { ImageZoom, ImageZoomProps } from 'fumadocs-ui/components/image-zoom';
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 import { openapi, source } from '@/lib/source';
-import { createMetadata, metadataImage } from '@/lib/metadata';
+import { metadataImage } from '@/lib/metadata';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -84,13 +84,8 @@ export async function generateMetadata(props: {
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
-  return createMetadata(
-    metadataImage.withImage(page.slugs, {
-      title: page.data.title,
-      description: page.data.description,
-      openGraph: {
-        url: `/docs/${page.slugs.join('/')}`,
-      },
-    })
-  );
+  return metadataImage.withImage(page.slugs, {
+    title: page.data.title,
+    description: page.data.description,
+  });
 }
