@@ -1,38 +1,46 @@
-import { type ImageResponse } from 'next/og';
-import { generateOGImage } from 'fumadocs-ui/og';
-import { metadataImage } from '@/lib/metadata';
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
+import { type ImageResponse } from "next/og";
+import { generateOGImage } from "./og";
+import { metadataImage } from "@/lib/metadata";
+
+const fontPath = join(
+  process.cwd(),
+  "app/docs-og/[...slug]/JetBrainsMono-Regular.ttf"
+);
+const fontBoldPath = join(
+  process.cwd(),
+  "app/docs-og/[...slug]/JetBrainsMono-Bold.ttf"
+);
+
+const font = readFileSync(fontPath);
+const fontBold = readFileSync(fontBoldPath);
 
 export const GET = metadataImage.createAPI((page): ImageResponse => {
   return generateOGImage({
+    primaryTextColor: "rgb(240,240,240)",
     title: page.data.title,
     description: page.data.description,
-    site: 'PayMdir',
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="120"
-        height="120"
-        viewBox="0 0 24 24"
-        stroke="url(#test)"
-        style={{
-          marginLeft: '-4px',
-        }}
-        strokeWidth="1"
-        strokeLinecap="round"
-        fill="rgb(0,0,0,0.8)"
-        strokeLinejoin="round"
-      >
-        <linearGradient id="test" x1="0" y1="0" x2="0" y2="1">
-          <stop stopColor="white" />
-          <stop stopColor="rgb(100,100,100)" offset="100%" />
-        </linearGradient>
-        <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-        <polyline points="11 3 11 11 14 8 17 11 17 3" />
-      </svg>
-    ),
+    fonts: [
+      {
+        name: "Mono",
+        data: font,
+        weight: 400,
+      },
+      {
+        name: "Mono",
+        data: fontBold,
+        weight: 600,
+      },
+    ],
   });
 });
 
-export function generateStaticParams() {
+export function generateStaticParams(): {
+  slug: string[];
+}[] {
   return metadataImage.generateParams();
 }
+
+export const dynamic = "force-dynamic";

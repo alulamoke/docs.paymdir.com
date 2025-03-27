@@ -1,9 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/vitepress.css';
+@import 'fumadocs-ui/css/preset.css';
+
+@source ".";
+@source "../components";
+@source "../content";
+@source '../node_modules/fumadocs-ui/dist/**/*.js';
+@source '../node_modules/fumadocs-openapi/dist/**/*.js';
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+}
 
 :root,
 html,
 body {
   height: 100%;
 }
+

@@ -1,8 +1,8 @@
-import type { ReactNode } from 'react';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import { Slot } from '@radix-ui/react-slot';
-import { baseOptions } from '@/app/layout.config';
-import { source } from '@/lib/source';
+import type { ReactNode } from "react";
+import { DocsLayout } from "fumadocs-ui/layouts/docs";
+import { Slot } from "@radix-ui/react-slot";
+import { baseOptions } from "@/app/layout.config";
+import { source } from "@/lib/source";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -21,8 +21,8 @@ export default function Layout({ children }: { children: ReactNode }) {
                 <Slot
                   className="bg-gradient-to-t from-background/80 p-1 [&_svg]:size-5"
                   style={{
-                    color: `hsl(var(--${meta.file.dirname}-color))`,
-                    backgroundColor: `hsl(var(--${meta.file.dirname}-color)/.3)`,
+                    color: `var(--${meta.file.dirname}-color)`,
+                    backgroundColor: `hslvar(--${meta.file.dirname}-color)/.3`,
                   }}
                 >
                   {node.icon}
