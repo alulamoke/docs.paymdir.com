@@ -9,6 +9,10 @@ import {
 import defaultMdxComponents, { createRelativeLink } from "fumadocs-ui/mdx";
 import { ImageZoom, ImageZoomProps } from "fumadocs-ui/components/image-zoom";
 import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+
+import { Rate } from "@/components/rate";
+import { repo, owner, onRateAction } from "@/lib/github";
+
 import { openapi, source } from "@/lib/source";
 import { createMetadata, metadataImage } from "@/lib/metadata";
 
@@ -45,8 +49,8 @@ export default async function Page(props: {
       full={page.data.full}
       lastUpdate={lastModified}
       editOnGithub={{
-        owner: "alulamoke",
-        repo: "docs.dinarpay.et",
+        repo,
+        owner,
         sha: "main",
         path: `content/docs/${page.file.path}`,
       }}
@@ -70,6 +74,7 @@ export default async function Page(props: {
           }}
         />
       </DocsBody>
+      <Rate onRateAction={onRateAction} />
     </DocsPage>
   );
 }
