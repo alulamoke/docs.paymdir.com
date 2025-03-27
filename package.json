@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fumadocs-core": "15.1.2",
     "fumadocs-docgen": "^2.0.0",
@@ -20,6 +21,7 @@
     "lucide-react": "^0.484.0",
     "motion": "^12.6.2",
     "next": "15.2.3",
+    "octokit": "^4.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rimraf": "^6.0.1",
