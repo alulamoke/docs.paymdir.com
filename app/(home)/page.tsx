@@ -16,14 +16,24 @@ export default function HomePage() {
               to help you seamlessly connect to PayMdir&apos;s powerful payment
               system. Build, test, and deploy with ease.
             </p>
-            <Link href="/docs/core">
-              <button
-                type="button"
-                className="px-4 py-2.5 font-medium bg-fd-primary hover:bg-fd-primary/80 hover:-translate-y-1 border border-transparent transition-all duration-300 ease-in-out text-fd-primary-foreground rounded-xl focus:outline-none focus:ring-2 focus:ring-fd-primary"
-              >
-                Get Started
-              </button>
-            </Link>
+            <div className="flex items-center justify-between gap-4">
+              <Link href="/docs/core">
+                <button
+                  type="button"
+                  className="px-4 py-2.5 font-medium bg-fd-primary hover:bg-fd-primary/80 hover:-translate-y-1 border border-transparent transition-all duration-300 ease-in-out text-fd-primary-foreground rounded-xl focus:outline-none focus:ring-2 focus:ring-fd-primary"
+                >
+                  Get Started
+                </button>
+              </Link>
+              <Link href="https://github.com/PayMdir" target="_blank">
+                <button
+                  type="button"
+                  className="px-4 py-2.5 font-medium bg-transparent hover:bg-gray-100 hover:-translate-y-1 border border-gray-300 transition-all duration-300 ease-in-out text-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300"
+                >
+                  GitHub
+                </button>
+              </Link>
+            </div>
           </section>
         }
       >

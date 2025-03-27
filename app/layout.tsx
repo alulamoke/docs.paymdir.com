@@ -2,10 +2,8 @@ import type { ReactNode } from "react";
 import type { Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { RootProvider } from "fumadocs-ui/provider";
-import { Banner } from "fumadocs-ui/components/banner";
 
 import "./global.css";
-import { Background } from "@/components/Background";
 import { baseUrl, createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
@@ -34,13 +32,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={poppins.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider>
-          <Banner id="banner-id" className="grid place-items-center p-4">
-            🎉 Welcome! Explore our comprehensive documentation to get started
-          </Banner>
-          <Background />
-          {children}
-        </RootProvider>
+        <RootProvider>{children}</RootProvider>
       </body>
     </html>
   );
