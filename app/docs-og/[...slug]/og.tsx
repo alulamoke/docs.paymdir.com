@@ -55,6 +55,10 @@ export function generate({
           style={{
             fontWeight: 600,
             fontSize: "76px",
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
           }}
         >
           {props.title}
@@ -63,8 +67,11 @@ export function generate({
           style={{
             fontSize: "48px",
             color: "rgba(240,240,240,0.7)",
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
           }}
-          className="line-clamp-2"
         >
           {props.description}
         </p>

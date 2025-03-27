@@ -14,7 +14,7 @@ export function createMetadata(override: Metadata): Metadata {
       title: override.title ?? undefined,
       description: override.description ?? undefined,
       url: "https://paymdir.netlify.app",
-      images: "/logo.png",
+      images: "/banner.png",
       siteName: "PayMdir",
       ...override.openGraph,
     },
@@ -23,7 +23,7 @@ export function createMetadata(override: Metadata): Metadata {
       creator: "@alulamoke",
       title: override.title ?? undefined,
       description: override.description ?? undefined,
-      images: "/logo.png",
+      images: "/banner.png",
       ...override.twitter,
     },
   };
