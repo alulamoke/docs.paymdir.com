@@ -64,6 +64,7 @@ export function generate({
             fontSize: "48px",
             color: "rgba(240,240,240,0.7)",
           }}
+          className="line-clamp-2"
         >
           {props.description}
         </p>
