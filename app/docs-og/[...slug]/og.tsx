@@ -39,8 +39,11 @@ export function generate({
         width: "100%",
         height: "100%",
         backgroundColor: "rgb(10,10,10)",
+        backgroundImage:
+          "linear-gradient(rgba(255, 255, 255, 0.065) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.065) 1px, transparent 1px)",
+        backgroundSize: "10px 10px",
         padding: "4rem",
-        gap: '4rem',
+        gap: "4rem",
       }}
     >
       {/* Title & Description - Top Left */}
@@ -48,31 +51,30 @@ export function generate({
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: "2rem",
-          maxWidth: '80%',
+          gap: "1rem",
+          maxWidth: "80%",
         }}
       >
-        <p
+        <h1
           style={{
             fontWeight: 600,
             fontSize: "76px",
             color: "white",
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
         >
           {props.title}
-        </p>
+        </h1>
         <p
           style={{
             fontSize: "36px",
             color: "rgba(240,240,240,0.7)",
-            lineHeight: 1.2,
-            display: '-webkit-box',
+            display: "-webkit-box",
             WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
           }}
         >
           {props.description}
@@ -82,7 +84,7 @@ export function generate({
       {/* Logo - Bottom Right */}
       <div
         style={{
-          marginTop: 'auto',
+          marginTop: "auto",
           display: "flex",
           justifyContent: "flex-end",
           alignItems: "center",
