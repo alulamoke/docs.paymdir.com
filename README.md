@@ -1,4 +1,4 @@
-# PayMdir Documentation Portal
+# PayMdir
 
 This is the official documentation site for PayMdir's payment gateway system, built with [Next.js](https://nextjs.org/) and [Fumadocs](https://fumadocs.vercel.app).
 
