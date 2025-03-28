@@ -40,16 +40,53 @@ export function generate({
         height: "100%",
         backgroundColor: "rgb(10,10,10)",
         padding: "4rem",
+        gap: '4rem',
       }}
     >
-      {/* Logo Header */}
+      {/* Title & Description - Top Left */}
       <div
         style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "2rem",
+          maxWidth: '80%',
+        }}
+      >
+        <p
+          style={{
+            fontWeight: 600,
+            fontSize: "76px",
+            color: "white",
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {props.title}
+        </p>
+        <p
+          style={{
+            fontSize: "36px",
+            color: "rgba(240,240,240,0.7)",
+            lineHeight: 1.2,
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}
+        >
+          {props.description}
+        </p>
+      </div>
+
+      {/* Logo - Bottom Right */}
+      <div
+        style={{
+          marginTop: 'auto',
           display: "flex",
           justifyContent: "flex-end",
           alignItems: "center",
           gap: "24px",
-          marginBottom: "auto",
           color: primaryTextColor,
         }}
       >
@@ -86,43 +123,6 @@ export function generate({
           }}
         >
           PayMdir
-        </p>
-      </div>
-
-      {/* Content Area */}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-end",
-          alignItems: "flex-start",
-          flex: 1,
-          gap: "2rem",
-        }}
-      >
-        <p
-          style={{
-            fontWeight: 600,
-            fontSize: "76px",
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-          }}
-        >
-          {props.title}
-        </p>
-        <p
-          style={{
-            fontSize: "36px",
-            color: "rgba(240,240,240,0.7)",
-            lineHeight: 1.2,
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-          }}
-        >
-          {props.description}
         </p>
       </div>
     </div>
