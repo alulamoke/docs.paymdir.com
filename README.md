@@ -1,7 +1,28 @@
-# docs.paymdir.com
+# PayMdir Documentation Portal
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+This is the official documentation site for PayMdir's payment gateway system, built with [Next.js](https://nextjs.org/) and [Fumadocs](https://fumadocs.vercel.app).
+
+![PayMdir Documentation](public/docs.png)
+
+## Overview
+
+The PayMdir Documentation Portal provides comprehensive API documentation, integration guides, and resources to help developers seamlessly connect to PayMdir's powerful payment system. Build, test, and deploy with ease.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/alulamoke/docs.paymdir.com.git
+cd docs.paymdir.com
+```
 
 Run development server:
 
