@@ -92,6 +92,18 @@ export async function generateMetadata(props: {
       description:
         page.data.description ||
         "Comprehensive API documentation, integration guides, and resources to help you seamlessly connect to PayMdir's powerful payment system. Build, test, and deploy with ease.",
+      keywords: [
+        page.data.title,
+        ...page.slugs,
+        "PayMdir",
+        "payment gateway",
+        "API documentation",
+        `${page.data.title} integration`,
+        `${page.slugs[page.slugs.length - 1]} guide`,
+        "payment system",
+        "Ethiopian payments",
+        "digital payments",
+      ].filter(Boolean),
       openGraph: {
         url: `/docs/${page.slugs.join("/")}`,
       },

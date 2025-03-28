@@ -13,7 +13,7 @@ export function createMetadata(override: Metadata): Metadata {
     openGraph: {
       title: override.title ?? undefined,
       description: override.description ?? undefined,
-      url: "https://paymdir.netlify.app",
+      url: "https://docs.paymdir.com",
       images: "/banner.png",
       siteName: "PayMdir",
       ...override.openGraph,
@@ -32,4 +32,4 @@ export function createMetadata(override: Metadata): Metadata {
 export const baseUrl =
   process.env.NODE_ENV === "development"
     ? new URL("http://localhost:3000")
-    : new URL("https://paymdir.netlify.app");
+    : new URL("https://docs.paymdir.com");

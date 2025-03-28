@@ -13,6 +13,20 @@ export const metadata = createMetadata({
   },
   description:
     "Comprehensive API documentation, integration guides, and resources to help you seamlessly connect to PayMdir's powerful payment system. Build, test, and deploy with ease.",
+  keywords: [
+    "PayMdir",
+    "PayMdir Payment",
+    "PayMdir API",
+    "PayMdir Documentation",
+    "PayMdir Integration",
+    "PayMdir Resources",
+    "PayMdir SDK",
+    "API",
+    "Documentation",
+    "Integration",
+    "Resources",
+    "SDK",
+  ],
   metadataBase: baseUrl,
 });
 
