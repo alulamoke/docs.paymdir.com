@@ -14,7 +14,13 @@ export function createMetadata(override: Metadata): Metadata {
       title: override.title ?? undefined,
       description: override.description ?? undefined,
       url: "https://docs.paymdir.com",
-      images: "/docs.png",
+      images: [
+        {
+          url: "/docs.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
       siteName: "PayMdir",
       ...override.openGraph,
     },
@@ -23,7 +29,13 @@ export function createMetadata(override: Metadata): Metadata {
       creator: "@alulamoke",
       title: override.title ?? undefined,
       description: override.description ?? undefined,
-      images: "/docs.png",
+      images: [
+        {
+          url: "/docs.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
       ...override.twitter,
     },
   };

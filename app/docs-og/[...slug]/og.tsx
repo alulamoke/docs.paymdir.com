@@ -28,7 +28,7 @@ export function generateOGImage(
 }
 
 export function generate({
-  primaryTextColor = "rgb(56,189,248)",
+  primaryTextColor = "rgb(255,150,255)",
   ...props
 }: GenerateProps): ReactElement {
   return (
@@ -38,25 +38,24 @@ export function generate({
         flexDirection: "column",
         width: "100%",
         height: "100%",
-        color: "white",
-        backgroundColor: "rgb(2,6,23)",
-        backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect width="100%" height="100%" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="20,20" transform="rotate(0,0,0)" /><rect width="100%" height="100%" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="20,20" transform="rotate(90,0,0)" /></svg>')`,
+        backgroundColor: "rgb(10,10,10)",
+        padding: "4rem",
       }}
     >
-      {/* Top right logo */}
+      {/* Logo Header */}
       <div
         style={{
-          position: "absolute",
-          top: "40px",
-          right: "40px",
           display: "flex",
+          justifyContent: "flex-end",
           alignItems: "center",
-          gap: "12px",
+          gap: "24px",
+          marginBottom: "auto",
+          color: primaryTextColor,
         }}
       >
         <svg
-          width="40"
-          height="40"
+          width="60"
+          height="60"
           viewBox="0 0 180 180"
           filter="url(#logo-shadow)"
         >
@@ -67,7 +66,7 @@ export function generate({
                 dx="0"
                 dy="0"
                 stdDeviation="4"
-                floodColor={primaryTextColor}
+                floodColor="white"
                 floodOpacity="1"
               />
             </filter>
@@ -76,94 +75,51 @@ export function generate({
               gradientTransform="rotate(45)"
             >
               <stop offset="45%" stopColor="black" />
-              <stop offset="100%" stopColor={primaryTextColor} />
+              <stop offset="100%" stopColor="white" />
             </linearGradient>
           </defs>
         </svg>
         <p
           style={{
-            fontSize: "28px",
+            fontSize: "46px",
             fontWeight: 600,
-            color: primaryTextColor,
           }}
         >
           PayMdir
         </p>
       </div>
 
-      {/* Version number */}
-      <div
-        style={{
-          position: "absolute",
-          top: "40px",
-          right: "240px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
-        }}
-      >
-        <div
-          style={{
-            fontSize: "16px",
-            color: "rgba(255,255,255,0.6)",
-            marginBottom: "4px",
-          }}
-        >
-          Version
-        </div>
-        <div
-          style={{
-            fontSize: "80px",
-            fontWeight: 600,
-            lineHeight: "1",
-            color: primaryTextColor,
-          }}
-        >
-          4.0
-        </div>
-        <div
-          style={{
-            fontSize: "20px",
-            color: "rgba(255,255,255,0.8)",
-            marginTop: "4px",
-          }}
-        >
-          docs
-        </div>
-      </div>
-
-      {/* Main content */}
+      {/* Content Area */}
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          width: "100%",
-          height: "100%",
-          padding: "4rem",
-          paddingTop: "10rem",
+          justifyContent: "flex-end",
+          alignItems: "flex-start",
+          flex: 1,
+          gap: "2rem",
         }}
       >
         <p
           style={{
             fontWeight: 600,
             fontSize: "76px",
-            display: "-webkit-box",
-            WebkitLineClamp: 1,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
           }}
         >
           {props.title}
         </p>
         <p
           style={{
-            fontSize: "48px",
+            fontSize: "36px",
             color: "rgba(240,240,240,0.7)",
-            display: "-webkit-box",
+            lineHeight: 1.2,
+            display: '-webkit-box',
             WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-            marginTop: "1rem",
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
           }}
         >
           {props.description}
