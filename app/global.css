@@ -20,3 +20,13 @@ body {
   height: 100%;
 }
 
+#nd-subnav{
+  @apply fixed w-full;
+}
+
+/* #nd-docs-layout{
+  @apply mt-14 md:mt-0;
+} */
+
+
+

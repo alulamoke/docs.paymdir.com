@@ -54,9 +54,14 @@ export default async function Page(props: {
         sha: "main",
         path: `content/docs/${page.file.path}`,
       }}
-      breadcrumb={{ includePage: true, includeSeparator: true }}
       tableOfContent={{ style: "clerk" }}
       tableOfContentPopover={{ style: "clerk" }}
+      breadcrumb={{
+        enabled: true,
+        includePage: true,
+        includeRoot: true,
+        includeSeparator: true,
+      }}
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>

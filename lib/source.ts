@@ -1,8 +1,10 @@
-import { docs } from "@/.source";
+import { createElement } from "react";
+import { icons } from "lucide-react";
+
 import { loader } from "fumadocs-core/source";
 import { attachFile, createOpenAPI } from "fumadocs-openapi/server";
-import { icons } from "lucide-react";
-import { createElement } from "react";
+
+import { docs } from "@/.source";
 
 // `loader()` also assign a URL to your pages
 // See https://fumadocs.vercel.app/docs/headless/source-api for more info

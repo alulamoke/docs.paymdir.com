@@ -16,33 +16,21 @@ export default function HomePage() {
               to help you seamlessly connect to PayMdir&apos;s powerful payment
               system. Build, test, and deploy with ease.
             </p>
-            <div className="flex items-center justify-between gap-4">
-              <Link href="/docs/core">
-                <button
-                  type="button"
-                  className="px-4 py-2.5 font-medium bg-fd-primary hover:bg-fd-primary/80 hover:-translate-y-1 border border-transparent transition-all duration-300 ease-in-out text-fd-primary-foreground rounded-xl focus:outline-none focus:ring-2 focus:ring-fd-primary"
-                >
-                  Get Started
-                </button>
-              </Link>
-              <Link href="https://github.com/PayMdir" target="_blank">
-                <button
-                  type="button"
-                  className="px-4 py-2.5 font-medium bg-transparent hover:opacity-80 hover:-translate-y-1 border border-gray-300 transition-all duration-300 ease-in-out rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300"
-                >
-                  GitHub
-                </button>
-              </Link>
-            </div>
+            <Link
+              href="/docs"
+              className="hover:shadow-sm dark:border-stone-100 dark:hover:shadow-sm border-2 border-black bg-fd-primary px-4 py-1.5 text-sm uppercase text-fd-primary-foreground shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] transition duration-200 md:px-8 dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
+            >
+              Get Started
+            </Link>
           </section>
         }
       >
         <Image
-          src="/banner.png"
-          alt="banner image"
+          src="/docs.png"
+          alt="docs image"
           height={720}
           width={1080}
-          className="mx-auto rounded-2xl object-fill size-full"
+          className="rounded-2xl object-left-bottom size-full"
           priority={true}
           draggable={false}
         />

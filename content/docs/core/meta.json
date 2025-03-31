@@ -1,7 +1,16 @@
 {
-    "root": true,
-    "title": "Core Docs",
-    "description": "PayMdir core documentation",
-    "icon": "Building2",
-    "pages": ["---Guide---", "index", "comparisons", "---Setup---", "integrations", "transfer", "transaction", "testing"]
+  "root": true,
+  "title": "Docs",
+  "description": "Get started with the docs",
+  "icon": "Building2",
+  "pages": [
+    "---Guide---",
+    "index",
+    "comparisons",
+    "---Setup---",
+    "integrations",
+    "transfer",
+    "transaction",
+    "testing"
+  ]
 }

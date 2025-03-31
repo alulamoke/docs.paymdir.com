@@ -1,7 +1,7 @@
-{ 
-    "root": true,
-    "title": "API Example",
-    "description": "A demo for API Examples",
-    "icon": "Rocket",
-    "pages": ["index", "tickets", "operations", "events"]
+{
+  "root": true,
+  "title": "Examples",
+  "description": "Examples and guides",
+  "icon": "Rocket",
+  "pages": ["index", "---APIs---", "events", "tickets", "operations"]
 }
