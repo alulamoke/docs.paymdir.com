@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import Section from "@/components/section";
 import Navbar from "@/components/landing/navbar";
 
