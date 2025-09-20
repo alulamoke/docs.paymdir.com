@@ -16,10 +16,10 @@ export default function NotFound() {
           <p className="text-sm mb-8">Need help? Visit the docs</p>
           <div className="flex flex-col items-center gap-6">
             <Link
-              href="/docs"
+              href="/"
               className="hover:shadow-sm dark:border-stone-100 dark:hover:shadow-sm border-2 border-black bg-fd-primary px-4 py-1.5 text-sm uppercase text-fd-primary-foreground shadow-[1px_1px_rgba(0,0,0),2px_2px_rgba(0,0,0),3px_3px_rgba(0,0,0),4px_4px_rgba(0,0,0),5px_5px_0px_0px_rgba(0,0,0)] transition duration-200 md:px-8 dark:shadow-[1px_1px_rgba(255,255,255),2px_2px_rgba(255,255,255),3px_3px_rgba(255,255,255),4px_4px_rgba(255,255,255),5px_5px_0px_0px_rgba(255,255,255)]"
             >
-              Go to docs
+              Go to HomePage
             </Link>
           </div>
         </div>

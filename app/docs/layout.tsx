@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { DocsLayout } from "fumadocs-ui/layouts/notebook";
+import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import { Slot } from "@radix-ui/react-slot";
 import { baseOptions } from "@/app/layout.config";
 import { source } from "@/lib/source";

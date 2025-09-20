@@ -5,6 +5,16 @@ const withMDX = createMDX();
 
 const config: NextConfig = {
   reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+        port: "",
+        pathname: "/random/**",
+      },
+    ],
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

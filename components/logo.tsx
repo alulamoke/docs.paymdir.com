@@ -1,16 +1,9 @@
-import Image from "next/image";
-import LOGO from "@/public/logo.png";
+import { Rocket } from "lucide-react";
 
 export const Logo = () => {
   return (
     <div className="flex items-center gap-2">
-      <Image
-        alt="Logo"
-        src={LOGO}
-        width={24}
-        height={24}
-        className="rounded-full object-cover size-6"
-      />
+      <Rocket className="size-5 text-green-400" />
       <p className="font-semibold">PayMdir</p>
     </div>
   );

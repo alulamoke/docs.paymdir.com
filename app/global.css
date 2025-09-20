@@ -1,12 +1,35 @@
-@import 'tailwindcss';
-@import 'fumadocs-ui/css/vitepress.css';
-@import 'fumadocs-ui/css/preset.css';
+@import "tailwindcss";
+@import "fumadocs-ui/css/vitepress.css";
+@import "fumadocs-ui/css/preset.css";
 
 @source ".";
 @source "../components";
 @source "../content";
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 @source '../node_modules/fumadocs-openapi/dist/**/*.js';
+
+@layer theme {
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+@layer utilities {
+  .animate-infinite-scroll {
+    animation: infinite-scroll 40s linear infinite;
+  }
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .text-shadow-lg {
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+}
 
 @layer base {
   button {
@@ -20,13 +43,10 @@ body {
   height: 100%;
 }
 
-#nd-subnav{
+#nd-subnav {
   @apply fixed w-full;
 }
 
 /* #nd-docs-layout{
   @apply mt-14 md:mt-0;
 } */
-
-
-

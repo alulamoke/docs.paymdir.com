@@ -13,22 +13,5 @@ export const baseOptions: BaseLayoutProps = {
     title: <Logo />,
     transparentMode: "top",
   },
-  links: [
-    {
-      text: "Docs",
-      url: "/docs/core",
-      active: "nested-url",
-    },
-    {
-      text: "Showcase",
-      url: "/showcase",
-      active: "nested-url",
-    },
-    {
-      text: "Blog",
-      url: "/blog",
-      active: "nested-url",
-    },
-  ],
   githubUrl: "https://github.com/alulamoke/docs.paymdir.com",
 };
